@@ -1,0 +1,20 @@
+{
+    "name": "semyenov/rabbitmq-php",
+    "description": "RabbitMQ PHP Client",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexander Semyenov",
+            "email": "semyenov@hotmail.com"
+        }
+    ],
+    "require": {
+        "php-amqplib/php-amqplib": "^2.0",
+        "phpseclib/bcmath_compat": "^2.0"
+    }
+}

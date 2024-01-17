@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/php
+{
+	"name": "rabbitmq-php",
+	"service": "devcontainer",
+	"dockerComposeFile": "docker-compose.yml",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"forwardPorts": [
+		8000
+	],
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"DEVSENSE.phptools-vscode",
+				"Codeium.codeium",
+				"wmaurer.change-case",
+				"micnil.vscode-checkpoints",
+				"MatthewNespor.vscode-color-identifiers-mode",
+				"stackbreak.comment-divider",
+				"EditorConfig.EditorConfig",
+				"antfu.file-nesting",
+				"piotrpalarz.vscode-gitignore-generator",
+				"DEVSENSE.composer-php-vscode"
+			]
+		}
+	},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
+}
